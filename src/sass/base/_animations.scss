@@ -1,0 +1,20 @@
+@keyframes moveToRightInfinite {
+
+  0% {
+    opacity: .0;
+    transform: translateX(-20rem);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(5rem);
+    
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

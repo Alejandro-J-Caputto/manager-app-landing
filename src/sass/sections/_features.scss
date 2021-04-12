@@ -1,0 +1,119 @@
+//FEATURES
+
+.section-features {
+  position: relative;
+
+  // display: flex;
+  // flex-direction: column;
+  padding: 10rem;
+  height: fit-content;
+  background-color: $color-grey-light-2;
+  @include responsive(phone) {
+    padding: 2rem 0;
+    
+  }
+}
+.features-grid {
+  display: flex;
+
+}
+
+.heading-sec {
+  // background-color: brown;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  // width: 75%;
+  &--main {
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+    font-size: 5rem;
+    background-image: linear-gradient(to right, rgba($color-angular-blue-light, .80), $color-angular-blue-dark);
+  }
+ 
+}
+.features-content {
+  display: flex;
+  flex-direction: column;
+
+}
+.features-grid {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.feat-card {
+  // padding: 2rem;
+  text-align: center;
+  // background-color: skyblue;
+  width: 25rem;
+  border-radius: 5px;
+  height: 35rem;
+  margin-bottom: 10px;
+  overflow: hidden;
+  // background-color: rgb(58, 48, 126);
+  box-shadow: $shadow-dark;
+  @include responsive(tab-port) {
+    width: 100%;
+    height: 45rem;
+
+  }
+  @include responsive(phone) {
+    width: 100%;
+    
+  }
+  &__head {
+    position: relative;
+    // padding: 5rem;
+    // background-color: orangered;
+    &__title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $color-white;
+      font-size: 3rem;
+    }
+  }
+  &__body {
+    height: 100%;
+    padding: 2rem;
+    & p {
+      padding: 1rem;
+      border-bottom: 1px solid $color-grey-dark-2;
+    }
+  }
+}
+.feat-card__head__picture {
+
+  background-size: cover;
+  height: 16rem;
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  @include responsive(tab-port) {
+    height: 24rem;
+    clip-path: none;
+  }
+}
+.picture--1 {
+  background-image: linear-gradient(to right bottom, $color-angular-blue-light, $color-angular-blue-dark), url(../assets/img/workspace-header.jpg);
+}
+.picture--2 {
+  background-image: linear-gradient(to right bottom, $color-angular-light, $color-angular-darker), url(../assets/img/card-simplicity.jpg);
+
+  filter: blur(2px) brightness(70%);
+}
+.picture--3 {
+  background-image: linear-gradient(to right bottom, $color-yellow, $color-angular-blue-dark), url(../assets/img/card-free.jpg);
+  filter: blur(2px) brightness(70%);
+}
+.picture--4 {
+  background-image: linear-gradient(to right bottom, $color-angular-blue-light, $color-angular-blue-dark), url(../assets/img/pexels-pixabay-39624.jpg);
+  filter: blur(2px) brightness(70%);
+
+}
+
+

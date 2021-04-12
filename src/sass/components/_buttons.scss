@@ -1,0 +1,24 @@
+.btn {
+  text-transform: uppercase;
+  padding: 1.5rem 5rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  border: none;
+  color: $color-white;
+  font-weight: 400;
+  // display: inline-block;
+  cursor: pointer;
+  transition: all .3s;
+  outline: none;
+  &--red{
+    background-color: $color-angular-light;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-dark;
+  }
+  &:active, &:visited {
+    outline: none;
+    transform: translateY(0px);
+  }
+}

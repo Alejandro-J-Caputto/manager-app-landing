@@ -1,0 +1,105 @@
+.header {
+  display: flex;
+  color: $color-white;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 95vh;
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-angular-blue-light, 0.6),
+    rgba($color-angular-blue-dark, 0.4)
+  ),
+  url('../assets/img/coding-header.jpg');
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  @include responsive(tab-port) {
+    font-size: 50%;
+    padding: 3rem;
+  }
+  @include responsive(phone) {
+    min-height: 100vh;
+    padding: 3rem;
+  }
+}
+.header__logo-box {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  @include responsive(phone) {
+
+    
+  }
+}
+.header__logo {
+  color: $color-white;
+  font-size: 8rem;
+  @include responsive(phone) {
+    font-size: 6rem;
+    
+  }
+}
+.header__name {
+  color: $color-white;
+  font-size: 6rem;
+  padding-left: 3rem;
+  
+}
+.header-text {
+  // background-color: violet;
+  margin-bottom: 6rem;
+ 
+}
+
+.heading-primary {
+
+  &--main{
+    text-align: center;
+    font-size: 7rem;
+    @include responsive(phone) {
+      font-size: 4rem;
+      padding: 2rem 0;
+    }
+  }
+  &--sub {
+    text-align: center;
+    font-size: 3rem;
+    @include responsive(phone) {
+      font-size: 2rem;
+      
+    }
+  }
+
+  &--sub--1 {
+    text-align: center;
+    font-size: 2.2rem;
+    @include responsive(phone) {
+      font-size: 2rem;
+      
+    }
+  }
+}
+.header-tecnologies {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+  @include responsive(phone) {
+    padding: 4rem 0;
+    
+  }
+}
+.header-tecnologies i {
+  font-size: 9rem;
+  padding: 2rem;
+  animation: linear;
+  animation-name: moveToRightInfinite;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  @include responsive(phone) {
+    font-size: 5rem;
+    
+  }
+}

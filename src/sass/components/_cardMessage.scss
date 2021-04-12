@@ -1,0 +1,38 @@
+.my-message {
+  position: relative;
+  padding: 7rem;
+
+  margin-top: 20px;
+  width: 50%;
+  border-radius: 2px;
+  align-self: center;
+  box-shadow: $shadow-dark;
+  @include responsive(phone) {
+    width: 100%;
+    
+  }
+}
+.my-message__text {
+
+  & h2 {
+    margin-bottom: 2rem;
+  }
+
+}
+.my-message__shape {
+  float: left;
+  width: 18rem;
+  height: 18rem;
+  shape-outside: circle(50% at 50% 50%); //LAS MEDIDAS HAN DE ESTAR DEFINIDAS
+  // background-color: silver;
+  transform: translateX(-2rem);
+  // clip-path: circle(50% at 50% 50%);
+}
+
+.my-message__image {
+height: 100%;
+width: 100%;
+border-radius: 50%;
+}
+
+

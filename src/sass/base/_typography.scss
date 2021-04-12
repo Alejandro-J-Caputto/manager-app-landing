@@ -1,0 +1,28 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  // line-height: 1.7rem;
+}
+.heading-secondary {
+  font-weight: 600;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  backface-visibility: hidden;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+
+  color: transparent;
+  @include responsive(phone) {
+    background-image: none;
+    color: $color-white;
+  }
+}
+.paragraph {
+  margin-bottom: 10px;
+}
