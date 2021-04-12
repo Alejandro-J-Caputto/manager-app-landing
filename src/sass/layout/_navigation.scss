@@ -5,6 +5,11 @@
   }
   &__button {
     // Hides de background and refers to the label
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     background-color: $color-white;
     height: 7rem;
     width: 7rem;
@@ -15,6 +20,7 @@
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba($color-black, .25);
     text-align: center;
+    border: none;
     cursor: pointer;
     @include responsive(phone) {
       top: 4rem;
@@ -92,6 +98,9 @@
   &__checkbox:checked ~ &__background {
     transform: scale(100);
   }
+
+
+
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
@@ -103,48 +112,103 @@
  
 
   &__icon {
-    position: relative;
-    margin-top: 3.5rem;
-
-    &,
-    &::before,
-    &::after
-     {
-      width: 3rem;
-      height: 2px;
-      background-color: $color-black;
-      display: inline-block;
-
-
+    // position: fixed;
+    // margin-top: 3.5rem;
+    // padding: 2rem;
+    align-self: center;
+    height: 2px;
+    width: 3rem;
+    background-color: $color-black;
+   
+    z-index: 5000;
+    transition: all .2s;
+    &:not(:last-child) {
+      margin-bottom: 8px;
     }
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      transition: all .2s;
-    }
-    &::before {top: -.8rem;
-    }
-    &::after{ top: .8rem;}
-  }
-  &__button:hover &__icon::before {
-    top: -1rem;
-  }
-  &__button:hover &__icon::after {
-    top: 1rem;
-  }
-  &__checkbox:checked + &__button &__icon {
-    background-color: transparent;
-  }
-  &__checkbox:checked + &__button &__icon::before {
-    top: 0;
-    transform: rotate(135deg);
-  }
-  &__checkbox:checked + &__button &__icon::after {
-    top: 0;
-    transform: rotate(-135deg);
+    &--1 {
 
+    }
+    &--2 {
+      // position: absolute;
+      // top: -8rem;
+      // left: 0;
+      // transition: all .2s;
+    }
+    &--3 {
+      // position: absolute;
+      // top: 8rem;
+      // left: 0;
+      // transition: all .2s;
+    }
+    // &,
+    // &::before,
+    // &::after
+    //  {
+      //   width: 3rem;
+      //   height: 2px;
+      //   background-color: $color-black;
+      //   display: inline-block;
+
+
+    // }
+
+  //   &::before,
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     left: 0;
+  //     transition: all .2s;
+  //   }
+  //   &::before {top: -.8rem;
+  //   }
+  //   &::after{ top: .8rem;}
+  // }
+  // &__button:hover &__icon::before {
+  //   top: -1rem;
+  // }
+  // &__button:hover &__icon::after {
+  //   top: 1rem;
+  // }
+  // &__checkbox:checked + &__button &__icon {
+  //   background-color: transparent;
+  // }
+  // &__checkbox:checked + &__button &__icon::before {
+  //   top: 0;
+  //   transform: rotate(135deg);
+  // }
+  // &__checkbox:checked + &__button &__icon::after {
+  //   top: 0;
+  //   transform: rotate(-135deg);
+
+  // }
+// }
   }
+}
+//ADD TO BACKGROUND FOR EXPANSION
+.bg__shown {
+  transform: scale(100)
+}
+
+//ADD TO NAVIGATION 
+.nav__shown {
+  opacity: 1;
+  width: 100%;
+}
+
+//HIDES THE MIDDLE LINE 
+.icon-hide__partial {
+  background-color: transparent;
+}
+.icon-rotate--right {
+  top: 50%;
+  position: absolute;
+  margin-bottom: 0px;
+  transform: rotate(135deg);
+}
+
+.icon-rotate--left {
+  top: 50%;
+  position: absolute;
+  transform: rotate(-135deg);
 }

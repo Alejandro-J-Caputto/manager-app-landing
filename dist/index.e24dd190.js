@@ -442,7 +442,32 @@ id) /*: string*/
 }
 
 },{}],"31wMs":[function(require,module,exports) {
-console.log('hello');
+// ELEMENTS SELECTION
+class NavigationDroppable {
+  constructor() {
+    this.selectors();
+    this.toggleMenu();
+  }
+  selectors() {
+    this.navButton = document.querySelector('.navigation__button');
+    this.navList = document.querySelector('.navigation__nav');
+    this.backgroundButton = document.querySelector('.navigation__background');
+    this.navIconMenu = document.querySelector('.navigation__icon--2');
+    this.navIconMenuTop = document.querySelector('.navigation__icon--1');
+    this.navIconMenuBot = document.querySelector('.navigation__icon--3');
+  }
+  toggleMenu() {
+    this.navButton.addEventListener('click', this.togleMenuHandler.bind(this));
+  }
+  togleMenuHandler() {
+    this.backgroundButton.classList.toggle('bg__shown');
+    this.navList.classList.toggle('nav__shown');
+    this.navIconMenu.classList.toggle('icon-hide__partial');
+    this.navIconMenuTop.classList.toggle('icon-rotate--right');
+    this.navIconMenuBot.classList.toggle('icon-rotate--left');
+  }
+}
+const navDroppable = new NavigationDroppable();
 
 },{}]},["D07yq","31wMs"], "31wMs", "parcelRequire5108")
 
