@@ -1,8 +1,9 @@
 export interface NavigationElements{
 navButton: HTMLDivElement,
-navList:HTMLDivElement,
+nav:HTMLDivElement,
 backgroundButton: HTMLDivElement,
 navIconMenu: HTMLDivElement,
 navIconMenuTop:HTMLDivElement,
-navIconMenuBot:HTMLDivElement
+navIconMenuBot:HTMLDivElement,
+navList:HTMLUListElement
 }

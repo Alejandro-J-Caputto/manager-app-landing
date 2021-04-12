@@ -126,63 +126,7 @@
       margin-bottom: 8px;
     }
 
-    &--1 {
-
-    }
-    &--2 {
-      // position: absolute;
-      // top: -8rem;
-      // left: 0;
-      // transition: all .2s;
-    }
-    &--3 {
-      // position: absolute;
-      // top: 8rem;
-      // left: 0;
-      // transition: all .2s;
-    }
-    // &,
-    // &::before,
-    // &::after
-    //  {
-      //   width: 3rem;
-      //   height: 2px;
-      //   background-color: $color-black;
-      //   display: inline-block;
-
-
-    // }
-
-  //   &::before,
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     left: 0;
-  //     transition: all .2s;
-  //   }
-  //   &::before {top: -.8rem;
-  //   }
-  //   &::after{ top: .8rem;}
-  // }
-  // &__button:hover &__icon::before {
-  //   top: -1rem;
-  // }
-  // &__button:hover &__icon::after {
-  //   top: 1rem;
-  // }
-  // &__checkbox:checked + &__button &__icon {
-  //   background-color: transparent;
-  // }
-  // &__checkbox:checked + &__button &__icon::before {
-  //   top: 0;
-  //   transform: rotate(135deg);
-  // }
-  // &__checkbox:checked + &__button &__icon::after {
-  //   top: 0;
-  //   transform: rotate(-135deg);
-
-  // }
-// }
+   
   }
 }
 //ADD TO BACKGROUND FOR EXPANSION
@@ -211,4 +155,8 @@
   top: 50%;
   position: absolute;
   transform: rotate(-135deg);
+}
+
+.hidden {
+  display: none;
 }

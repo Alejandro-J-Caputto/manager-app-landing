@@ -447,24 +447,39 @@ class NavigationDroppable {
   constructor() {
     this.selectors();
     this.toggleMenu();
+    this.navigateTo();
   }
   selectors() {
     this.navButton = document.querySelector('.navigation__button');
-    this.navList = document.querySelector('.navigation__nav');
+    this.nav = document.querySelector('.navigation__nav');
     this.backgroundButton = document.querySelector('.navigation__background');
     this.navIconMenu = document.querySelector('.navigation__icon--2');
     this.navIconMenuTop = document.querySelector('.navigation__icon--1');
     this.navIconMenuBot = document.querySelector('.navigation__icon--3');
+    this.navList = document.querySelector('.navigation__list');
   }
   toggleMenu() {
-    this.navButton.addEventListener('click', this.togleMenuHandler.bind(this));
+    this.navButton.addEventListener('click', this.toggleMenuHandler.bind(this));
   }
-  togleMenuHandler() {
+  toggleMenuHandler() {
     this.backgroundButton.classList.toggle('bg__shown');
-    this.navList.classList.toggle('nav__shown');
+    this.nav.classList.toggle('nav__shown');
     this.navIconMenu.classList.toggle('icon-hide__partial');
     this.navIconMenuTop.classList.toggle('icon-rotate--right');
     this.navIconMenuBot.classList.toggle('icon-rotate--left');
+  }
+  navigateTo() {
+    this.navList.addEventListener('click', event => {
+      const liItem = event.target;
+      if (!liItem.classList.contains('navigation__link--app')) {
+        event.preventDefault();
+        this.toggleMenuHandler();
+        const id = liItem.getAttribute('href');
+        document.querySelector(id)?.scrollIntoView?.({
+          behavior: 'smooth'
+        });
+      }
+    });
   }
 }
 const navDroppable = new NavigationDroppable();

@@ -248,6 +248,9 @@ body {
   position: absolute;
   transform: rotate(-135deg); }
 
+.hidden {
+  display: none; }
+
 .header {
   display: flex;
   color: #fff;
