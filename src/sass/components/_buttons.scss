@@ -22,3 +22,39 @@
     transform: translateY(0px);
   }
 }
+
+.btn-slider {
+  position: absolute;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  font-size: 3rem;
+  z-index: 1000;
+  cursor: pointer;
+  border: none;
+  opacity: .75;
+  transition: all .3s;
+  background-color: $color-angular-blue-light;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:focus{
+    outline: none;
+  }
+}
+.btn-slider--right {
+  left: 74.3%;
+  transform: scaleX(-80%);
+  @include responsive(phone) {
+    left: 83%;
+    
+  }
+}
+
+.btn-slider--left {
+  left:20%;
+  @include responsive(phone) {
+    left: 5%;
+    
+  }
+}

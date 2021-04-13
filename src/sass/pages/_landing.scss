@@ -33,17 +33,7 @@
 
 
 //MESSAGE STORIES
-.section-messages {
-  width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  padding: 5rem;
-  @include responsive(phone) {
-    padding: 2rem 2rem;
-    
-  }
-}
 
 // END MESSAGE STORIES
 

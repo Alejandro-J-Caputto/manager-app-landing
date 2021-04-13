@@ -91,13 +91,54 @@ body {
     outline: none;
     transform: translateY(0px); }
 
+.btn-slider {
+  position: absolute;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  font-size: 3rem;
+  z-index: 1000;
+  cursor: pointer;
+  border: none;
+  opacity: .75;
+  transition: all .3s;
+  background-color: #42a5f5; }
+  .btn-slider:hover {
+    transform: scale(1.2); }
+  .btn-slider:focus {
+    outline: none; }
+
+.btn-slider--right {
+  left: 74.3%;
+  transform: scaleX(-80%); }
+  @media (max-width: 37.5em) {
+    .btn-slider--right {
+      left: 83%; } }
+
+.btn-slider--left {
+  left: 20%; }
+  @media (max-width: 37.5em) {
+    .btn-slider--left {
+      left: 5%; } }
+
+.section-messages {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 35rem 5rem; }
+  @media (max-width: 37.5em) {
+    .section-messages {
+      padding: 35rem 2rem;
+      width: 100%; } }
+
 .my-message {
   position: relative;
   padding: 7rem;
   margin-top: 20px;
-  width: 50%;
   border-radius: 2px;
-  align-self: center;
+  margin-right: 30px;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
   @media (max-width: 37.5em) {
     .my-message {
@@ -111,12 +152,29 @@ body {
   width: 18rem;
   height: 18rem;
   shape-outside: circle(50% at 50% 50%);
-  transform: translateX(-2rem); }
+  transform: translateX(-3rem); }
 
 .my-message__image {
   height: 100%;
   width: 100%;
+  background-size: cover;
+  background-position: center;
   border-radius: 50%; }
+
+.my-message__image--1 {
+  background-image: url("../assets/img/elon.jpg"); }
+
+.my-message__image--2 {
+  background-image: url("../assets/img/deadpool.jpeg"); }
+
+.my-message__image--3 {
+  background-image: url("../assets/img/profile-user.png"); }
+
+.my-message__image--4 {
+  background-image: url("../assets/img/paimei.jpg"); }
+
+.my-message__image--5 {
+  background-image: url("../assets/img/rock.jpg"); }
 
 .navigation__checkbox {
   display: none; }
@@ -148,7 +206,7 @@ body {
   width: 6rem;
   border-radius: 50%;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   top: 6.5rem;
   right: 6.5rem;
   background-image: radial-gradient(#42a5f5, #0d47a1);
@@ -164,8 +222,7 @@ body {
   height: 100vh;
   width: 100%;
   position: fixed;
-  top: 0;
-  right: 0;
+  right: -50%;
   z-index: 1500;
   opacity: 0;
   width: 0;
@@ -177,7 +234,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
-  text-align: center; }
+  text-align: center;
+  z-index: 5000; }
 
 .navigation__item {
   margin: 1rem; }
@@ -198,13 +256,6 @@ body {
   background-position: 100%;
   color: #eb2f64;
   transform: translateX(1rem); }
-
-.navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(100); }
-
-.navigation__checkbox:checked ~ .navigation__nav {
-  opacity: 1;
-  width: 100%; }
 
 .navigation__icon {
   align-self: center;
@@ -239,6 +290,10 @@ body {
 
 .hidden {
   display: none; }
+
+.bringBack {
+  top: 0;
+  right: 0; }
 
 .header {
   display: flex;
@@ -478,14 +533,28 @@ body {
   color: #fff;
   text-decoration: underline; }
 
-.section-messages {
-  width: 100%;
+.slide {
   display: flex;
-  flex-direction: column;
-  padding: 5rem; }
+  position: absolute;
+  width: 100%;
+  padding: 0 31rem;
+  transition: all .5s; }
+  @media (max-width: 75em) {
+    .slide {
+      padding: 12rem 22rem; } }
+  @media (max-width: 56.25em) {
+    .slide {
+      padding: 2rem 16rem; } }
   @media (max-width: 37.5em) {
-    .section-messages {
-      padding: 2rem 2rem; } }
+    .slide {
+      padding: 0;
+      margin-left: 4rem; } }
+
+.translate-left {
+  transform: translate(-85%, -45%); }
+
+.translate-right {
+  transform: translateX(); }
 
 .landing-page {
   padding: 2rem; }
@@ -501,12 +570,3 @@ body {
   position: relative;
   height: fit-content;
   background-image: linear-gradient(to right bottom, rgba(66, 165, 245, 0.6), rgba(13, 71, 161, 0.4)); }
-
-.section-messages {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 5rem; }
-  @media (max-width: 37.5em) {
-    .section-messages {
-      padding: 2rem 2rem; } }

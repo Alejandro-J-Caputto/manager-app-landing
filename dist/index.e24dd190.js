@@ -442,12 +442,23 @@ id) /*: string*/
 }
 
 },{}],"31wMs":[function(require,module,exports) {
-// ELEMENTS SELECTION
+var _navigations = require('./navigations');
+var _slider = require('./slider');
+const navDroppable = new _navigations.NavigationDroppable();
+const slider = new _slider.SliderShow();
+
+},{"./navigations":"5YDne","./slider":"35o7L"}],"5YDne":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "NavigationDroppable", function () {
+  return NavigationDroppable;
+});
 class NavigationDroppable {
   constructor() {
     this.selectors();
     this.toggleMenu();
     this.navigateTo();
+    this.hideNav();
   }
   selectors() {
     this.navButton = document.querySelector('.navigation__button');
@@ -458,12 +469,15 @@ class NavigationDroppable {
     this.navIconMenuBot = document.querySelector('.navigation__icon--3');
     this.navList = document.querySelector('.navigation__list');
   }
+  hideNav() {}
   toggleMenu() {
     this.navButton.addEventListener('click', this.toggleMenuHandler.bind(this));
   }
   toggleMenuHandler() {
+    this.hideNav();
     this.backgroundButton.classList.toggle('bg__shown');
     this.nav.classList.toggle('nav__shown');
+    this.nav.classList.toggle('bringBack');
     this.navIconMenu.classList.toggle('icon-hide__partial');
     this.navIconMenuTop.classList.toggle('icon-rotate--right');
     this.navIconMenuBot.classList.toggle('icon-rotate--left');
@@ -482,8 +496,97 @@ class NavigationDroppable {
     });
   }
 }
-const navDroppable = new NavigationDroppable();
 
-},{}]},["D07yq","31wMs"], "31wMs", "parcelRequire5108")
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
+"use strict";
+
+exports.interopDefault = function (a) {
+  return a && a.__esModule ? a : {
+    default: a
+  };
+};
+
+exports.defineInteropFlag = function (a) {
+  Object.defineProperty(a, '__esModule', {
+    value: true
+  });
+};
+
+exports.exportAll = function (source, dest) {
+  Object.keys(source).forEach(function (key) {
+    if (key === 'default' || key === '__esModule') {
+      return;
+    } // Skip duplicate re-exports when they have the same value.
+
+
+    if (key in dest && dest[key] === source[key]) {
+      return;
+    }
+
+    Object.defineProperty(dest, key, {
+      enumerable: true,
+      get: function () {
+        return source[key];
+      }
+    });
+  });
+  return dest;
+};
+
+exports.export = function (dest, destName, get) {
+  Object.defineProperty(dest, destName, {
+    enumerable: true,
+    get: get
+  });
+};
+},{}],"35o7L":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "SliderShow", function () {
+  return SliderShow;
+});
+class SliderShow {
+  constructor() {
+    this.selectors();
+    this.setPositionStart();
+    this.configureSlide();
+  }
+  selectors() {
+    this.slides = document.querySelectorAll('.slide');
+    this.btnSlideToRight = document.querySelector('.btn-slider--right');
+    this.btnSlideToLeft = document.querySelector('.btn-slider--left');
+  }
+  setPositionStart() {
+    this.slides.forEach((el, i) => {
+      el.style.transform = `translateX(${100 * i}%)`;
+    });
+  }
+  configureSlide() {
+    let slide = 0;
+    this.btnSlideToRight.addEventListener('click', () => {
+      if (slide === this.slides.length - 1) {
+        slide = 0;
+      } else {
+        slide++;
+      }
+      this.goToSlide(slide);
+    });
+    this.btnSlideToLeft.addEventListener('click', () => {
+      if (slide === 0) {
+        slide = this.slides.length - 1;
+      } else {
+        slide--;
+      }
+      this.goToSlide(slide);
+    });
+  }
+  goToSlide(slide) {
+    this.slides.forEach((el, i) => {
+      el.style.transform = `translateX(${100 * (i - slide)}%)`;
+    });
+  }
+}
+
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}]},["D07yq","31wMs"], "31wMs", "parcelRequire5108")
 
 //# sourceMappingURL=index.e24dd190.js.map

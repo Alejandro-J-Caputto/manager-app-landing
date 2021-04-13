@@ -1,0 +1,37 @@
+
+.slide {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  padding: 0 31rem;
+  transition: all .5s;
+  @include responsive(tab-land) {
+    padding: 12rem 22rem;
+  }
+  @include responsive(tab-port) {
+    padding: 2rem 16rem;
+  }
+  @include responsive(phone) {
+    padding: 0;
+    margin-left: 4rem;
+
+  }
+}
+
+// .slide-card--1 {
+//   transform: translateX(-100%);
+// }
+// .slide-card--2 {
+//   transform: translateX(0%);
+// }
+// .slide-card--1 {
+//   transform: translateX(200%);
+// }
+
+
+.translate-left {
+  transform: translate(-85%, -45%);
+}
+.translate-right {
+  transform: translateX();
+}

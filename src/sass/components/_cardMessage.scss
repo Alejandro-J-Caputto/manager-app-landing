@@ -1,11 +1,9 @@
 .my-message {
   position: relative;
   padding: 7rem;
-
   margin-top: 20px;
-  width: 50%;
   border-radius: 2px;
-  align-self: center;
+  margin-right: 30px;
   box-shadow: $shadow-dark;
   @include responsive(phone) {
     width: 100%;
@@ -25,14 +23,39 @@
   height: 18rem;
   shape-outside: circle(50% at 50% 50%); //LAS MEDIDAS HAN DE ESTAR DEFINIDAS
   // background-color: silver;
-  transform: translateX(-2rem);
+  transform: translateX(-3rem);
+
   // clip-path: circle(50% at 50% 50%);
 }
 
 .my-message__image {
-height: 100%;
-width: 100%;
-border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+
 }
+.my-message__image--1 {
+  background-image: url('../assets/img/elon.jpg');
+
+}
+.my-message__image--2 {
+  background-image: url('../assets/img/deadpool.jpeg');
+
+}
+.my-message__image--3 {
+  background-image: url('../assets/img/profile-user.png');
+
+}
+.my-message__image--4 {
+  background-image: url('../assets/img/paimei.jpg');
+}
+.my-message__image--5 {
+  background-image: url('../assets/img/rock.jpg');
+}
+
+
+
 
 

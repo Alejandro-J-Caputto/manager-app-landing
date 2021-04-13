@@ -1,11 +1,19 @@
 .section-messages {
-  width: 100%;
-
+  position: relative;
+  // width: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 5rem;
+  justify-content: center;
+  align-items: center;
+  // flex-direction: column;
+  // background-color: salmon;
+  // padding: 25rem;
+  // height: 20rem;
+  overflow: hidden;
+  // height: 90vh;
+  padding: 35rem 5rem;
+  // overflow: hidden;
   @include responsive(phone) {
-    padding: 2rem 2rem;
-    
+    padding: 35rem 2rem;
+    width: 100%;
   }
 }
