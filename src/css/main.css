@@ -548,7 +548,7 @@ body {
   @media (max-width: 37.5em) {
     .slide {
       padding: 0;
-      margin-left: 4rem; } }
+      margin-left: 2rem; } }
 
 .translate-left {
   transform: translate(-85%, -45%); }
