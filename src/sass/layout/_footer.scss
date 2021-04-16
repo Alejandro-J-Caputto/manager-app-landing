@@ -30,11 +30,14 @@
 }
 .footer__nav {
   display: flex;
-  align-items: baseline;
-  align-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
   padding: 2rem 0;
   width: 90%;
   padding: 5rem;
+  // background-color: turquoise;
   flex-wrap: wrap;
   @include responsive(phone) {
     padding: 0;
@@ -43,9 +46,10 @@
 }
 .footer__list {
   border-top: 1px solid $color-white;
+  border-bottom: 1px solid $color-white;
   list-style: none;
   display: flex;
-  flex: 0 0 50%;
+  // flex: 0 0 80%;
   flex-direction: row;
   align-content: space-around;
   justify-content: center;
@@ -63,9 +67,9 @@
   color: $color-white;
 }
 .paragraph-footer {
-  border-top: 1px solid $color-white;
-  padding: 2rem;
-  max-width: 50rem;
+  padding: 2rem 0;
+  max-width: 60rem;
+  text-align: center;
 }
 
 .footer__link:link, .footer__link:visited {

@@ -4,6 +4,7 @@
   margin-top: 20px;
   border-radius: 2px;
   margin-right: 30px;
+  width: 80rem;
   box-shadow: $shadow-dark;
   @include responsive(phone) {
     width: 100%;
@@ -37,22 +38,22 @@
 
 }
 .my-message__image--1 {
-  background-image: url('../assets/img/elon.jpg');
+  background-image: url('../assets/img/message--rey.jpg');
 
 }
 .my-message__image--2 {
-  background-image: url('../assets/img/deadpool.jpeg');
+  background-image: url('../assets/img/message--deadpool.jpg');
 
 }
 .my-message__image--3 {
-  background-image: url('../assets/img/profile-user.png');
+  background-image: url('../assets/img/message--gandalf.jpg');
 
 }
 .my-message__image--4 {
   background-image: url('../assets/img/paimei.jpg');
 }
 .my-message__image--5 {
-  background-image: url('../assets/img/rock.jpg');
+  background-image: url('../assets/img/message--arnold.jpg');
 }
 
 

@@ -7,7 +7,7 @@ export class SliderShow implements Slider {
   btnSlideToLeft!: HTMLButtonElement
 
   
-
+  
   constructor() {
     this.selectors();
     this.setPositionStart();
