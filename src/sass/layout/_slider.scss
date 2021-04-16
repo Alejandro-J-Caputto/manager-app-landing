@@ -4,7 +4,11 @@
   position: absolute;
   width: 100%;
   padding: 0 31rem;
-  transition: all .5s;
+  transition: transform .5s;
+
+  @include responsive(big-desktop) {
+    position: relative;
+  }
   @include responsive(tab-land) {
     padding: 12rem 22rem;
   }

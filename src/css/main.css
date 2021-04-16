@@ -126,6 +126,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   overflow: hidden;
   padding: 35rem 5rem; }
   @media (max-width: 37.5em) {
@@ -545,7 +546,10 @@ body {
   position: absolute;
   width: 100%;
   padding: 0 31rem;
-  transition: all .5s; }
+  transition: transform .5s; }
+  @media (min-width: 112.5em) {
+    .slide {
+      position: relative; } }
   @media (max-width: 75em) {
     .slide {
       padding: 12rem 22rem; } }
