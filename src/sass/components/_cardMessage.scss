@@ -6,6 +6,12 @@
   margin-right: 30px;
   width: 80rem;
   box-shadow: $shadow-dark;
+  @include responsive(big-desktop) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   @include responsive(phone) {
     width: 100%;
     

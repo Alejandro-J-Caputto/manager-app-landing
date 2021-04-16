@@ -126,7 +126,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
   overflow: hidden;
   padding: 35rem 5rem; }
   @media (max-width: 37.5em) {
@@ -142,6 +141,12 @@ body {
   margin-right: 30px;
   width: 80rem;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
+  @media (min-width: 112.5em) {
+    .my-message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); } }
   @media (max-width: 37.5em) {
     .my-message {
       width: 100%; } }
@@ -547,9 +552,6 @@ body {
   width: 100%;
   padding: 0 31rem;
   transition: transform .5s; }
-  @media (min-width: 112.5em) {
-    .slide {
-      position: relative; } }
   @media (max-width: 75em) {
     .slide {
       padding: 12rem 22rem; } }
