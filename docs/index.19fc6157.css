@@ -168,6 +168,12 @@ body {
   shape-outside: circle(50% at 50% 50%);
   transform: translateX(-3rem); }
 
+@media (max-width: 37.5em) {
+    .my-message__shape {
+      width: 9rem;
+      height: 9rem;
+      transform: translateX(-1rem); } }
+
 .my-message__image {
   height: 100%;
   width: 100%;

@@ -27,6 +27,11 @@
   transform: translateX(-3rem);
 
   // clip-path: circle(50% at 50% 50%);
+  @include responsive(phone) {
+    width: 9rem;
+    height: 9rem;
+    transform: translateX(-1rem);
+  }
 }
 
 .my-message__image {
