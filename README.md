@@ -1,11 +1,11 @@
 
-<img style="width: 600px; width: 600px;" src="src/assets/img/manager-shot--1.png"/>
+<img style="width: 600px; width: 600px;" src="./src/assets/img/manager-shot--1.png"/>
 
 # Manager-App 
 
 ## Welcome to manager App
 
-This is an app for testing and improving purposes. Please this is not a fully functional app, is just an experimental application for fun. 
+This is an app for testing and improving purposes. Please this is not a fully functional app, is just an experimental application. 
 
 ##  API
 
